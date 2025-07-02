@@ -39,9 +39,9 @@ from trainers.default import train
 
 
 # 6. Treinamento
-# root_dir = '/content/gdrive/MyDrive/dados'
-root_dir = './data'
-train(2, f'{root_dir}/dataset-full-roi-test',
-      'webdataset', 'inception_resnet_v2', batch_size=16, hyperparams={'lr': 1e-3, 'gamma': 0.95, 'step_size': 10, 'weight_decay': 1e-2}, shuffle_size=23974)
+root_dir = '/content/gdrive/MyDrive/datamining'
+# root_dir = './data'
+train(200, f'{root_dir}/dataset-balanced-roi',
+      'webdataset', 'maxvit_nano_rw_256', batch_size=128, hyperparams={'lr': 1e-3, 'gamma': 0.95, 'step_size': 10, 'weight_decay': 1e-2}, shuffle_size=23974)
 
 # 7. Visualização do treinamento com PCA
